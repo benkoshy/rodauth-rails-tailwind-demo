@@ -32,6 +32,10 @@ I would propose the following rod_auth layout, which assumes nothing:
 
 Then it should work fine.
 
+### Code of Conduct
+Free speech without any restrictions.
 
+### License
+MIT
 
 
