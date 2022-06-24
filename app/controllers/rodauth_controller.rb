@@ -11,7 +11,8 @@ class RodauthController < ApplicationController
         rodauth.create_account_path,
         rodauth.verify_account_path,
         rodauth.reset_password_path,
-        rodauth.reset_password_request_path
+        rodauth.reset_password_request_path,
+        rodauth.recovery_codes_path,
       "rodauth"
     else
       "application"
