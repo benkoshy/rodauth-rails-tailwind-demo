@@ -1,9 +1,9 @@
 GIT
-  remote: https://github.com/benkoshy/rodauth-rails.git
-  revision: ad27f39dce33e4e217b7212854d6b5eb0cb357ce
-  branch: add-tailwind-css-forms
+  remote: https://github.com/janko/rodauth-rails.git
+  revision: 81a267887c6bc94b349a801edf9c23dd5cd6adf2
+  branch: master
   specs:
-    rodauth-rails (1.4.2)
+    rodauth-rails (1.5.1)
       bcrypt
       railties (>= 4.2, < 8)
       roda (~> 3.55)
@@ -82,7 +82,7 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
-    after_commit_everywhere (1.2.0)
+    after_commit_everywhere (1.2.2)
       activerecord (>= 4.2)
       activesupport
     bcrypt (3.1.18)
@@ -129,7 +129,7 @@ GEM
     matrix (0.4.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
-    minitest (5.15.0)
+    minitest (5.16.1)
     msgpack (1.5.2)
     net-imap (0.2.3)
       digest
@@ -154,8 +154,8 @@ GEM
       nio4r (~> 2.0)
     racc (1.6.0)
     rack (2.2.3.1)
-    rack-test (1.1.0)
-      rack (>= 1.0, < 3)
+    rack-test (2.0.0)
+      rack (>= 1.3)
     rails (7.0.3)
       actioncable (= 7.0.3)
       actionmailbox (= 7.0.3)
@@ -173,7 +173,7 @@ GEM
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
-    rails-html-sanitizer (1.4.2)
+    rails-html-sanitizer (1.4.3)
       loofah (~> 2.3)
     railties (7.0.3)
       actionpack (= 7.0.3)
@@ -188,9 +188,9 @@ GEM
     reline (0.3.1)
       io-console (~> 0.5)
     rexml (3.2.5)
-    roda (3.56.0)
+    roda (3.57.0)
       rack
-    rodauth (2.24.0)
+    rodauth (2.25.0)
       roda (>= 2.6.0)
       sequel (>= 4)
     rodauth-model (0.2.0)
@@ -242,7 +242,7 @@ GEM
     websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.5.4)
+    zeitwerk (2.6.0)
 
 PLATFORMS
   x86_64-linux
