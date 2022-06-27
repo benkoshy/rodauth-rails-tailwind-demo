@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_24_072818) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_24_092157) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "citext"
   enable_extension "plpgsql"
+
+  create_table "account_email_auth_keys", force: :cascade do |t|
+    t.string "key", null: false
+    t.datetime "deadline", null: false
+    t.datetime "email_last_sent", default: -> { "CURRENT_TIMESTAMP" }, null: false
+  end
 
   create_table "account_login_change_keys", force: :cascade do |t|
     t.string "key", null: false
@@ -63,6 +69,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_24_072818) do
     t.index ["email"], name: "index_accounts_on_email", unique: true, where: "(status = ANY (ARRAY[1, 2]))"
   end
 
+  add_foreign_key "account_email_auth_keys", "accounts", column: "id"
   add_foreign_key "account_login_change_keys", "accounts", column: "id"
   add_foreign_key "account_otp_keys", "accounts", column: "id"
   add_foreign_key "account_password_reset_keys", "accounts", column: "id"

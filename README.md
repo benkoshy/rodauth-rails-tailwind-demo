@@ -2,7 +2,7 @@
 
 This is a demo rails app to test rodauth-rails tailwind integration.
 
-### Instructions: 
+### Instructions:
 
 Please change the path to the rodauth-rails library in your Gemfile. I have pointed it to benkoshy.
 

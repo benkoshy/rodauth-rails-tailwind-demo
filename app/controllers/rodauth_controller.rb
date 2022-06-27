@@ -13,6 +13,8 @@ class RodauthController < ApplicationController
         rodauth.reset_password_path,
         rodauth.reset_password_request_path,
         rodauth.recovery_codes_path,
+        rodauth.email_auth_path,
+        rodauth.email_auth_request_path
       "rodauth"
     else
       "application"

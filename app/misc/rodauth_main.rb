@@ -4,7 +4,8 @@ class RodauthMain < Rodauth::Rails::Auth
     enable :create_account, :verify_account, :verify_account_grace_period,
       :login, :logout, :remember,
       :reset_password, :change_password, :change_password_notify,
-      :change_login, :verify_login_change, :close_account, :recovery_codes
+      :change_login, :verify_login_change, :close_account, :recovery_codes,
+      :email_auth
 
     # See the Rodauth documentation for the list of available config options:
     # http://rodauth.jeremyevans.net/documentation.html
@@ -53,9 +54,11 @@ class RodauthMain < Rodauth::Rails::Auth
     create_password_changed_email do
       RodauthMailer.password_changed(*self.class.configuration_name, account_id)
     end
-    # create_email_auth_email do
-    #   RodauthMailer.email_auth(*self.class.configuration_name, account_id, email_auth_key_value)
-    # end
+
+    create_email_auth_email do
+       RodauthMailer.email_auth(*self.class.configuration_name, account_id, email_auth_key_value)
+    end
+    
     # create_unlock_account_email do
     #   RodauthMailer.unlock_account(*self.class.configuration_name, account_id, unlock_account_key_value)
     # end
