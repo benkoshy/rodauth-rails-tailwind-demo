@@ -15,8 +15,9 @@
 </div>
 <div class="mt-5">
   <h1 class="font-bold text-4xl"> To Be Done: </h1>
+  <p><%= link_to("Confirm Password", rodauth.confirm_password_path) %> (Requires Login)</p>
   <p><%= link_to("recovery_codes" ,rodauth.recovery_codes_path, class: "underline text-blue-600 hover:text-blue-800 visited:text-purple-600") %> (Requires Login)</p>
-  <p> add_recovery_codes.html.erb - This view holds no bootstrap &#47; tailwind specific classes. </p>  
+  <p> add_recovery_codes.html.erb - This view holds no bootstrap &#47; tailwind specific classes. </p>
   <p>app/views/rodauth/otp_auth.html.erb</p>
   <p>app/views/rodauth/otp_disable.html.erb</p>
   <p>app/views/rodauth/otp_setup.html.erb</p>
@@ -29,25 +30,25 @@
   <p>app/views/rodauth/two_factor_auth.html.erb</p>
   <p>app/views/rodauth/two_factor_disable.html.erb</p>
   <p>app/views/rodauth/two_factor_manage.html.erb</p>
-  <p>app/views/rodauth/unlock_account.html.erb</p>
-  <p>app/views/rodauth/unlock_account_request.html.erb</p>
+  <p>app/views/rodauth/unlock_account.html.erb
+    <%= link_to("unlock_account - not working for some reason", rodauth.unlock_account_path , class: "underline text-blue-600 hover:text-blue-800 visited:text-purple-600") %>
+  </p>
+  <p>
+    app/views/rodauth/unlock_account_request_path.html.erb    
+  </p>
   <p>app/views/rodauth/webauthn_auth.html.erb</p>
   <p>app/views/rodauth/webauthn_remove.html.erb</p>
   <p>app/views/rodauth/webauthn_setup.html.erb</p>
 </div>
-
-
 <h3 class="mt-5 text-lg font-semibold"> Email Auth Request </h3>
-
-<p class="mt-1">    
+<p class="mt-1">
   app/views/rodauth/_email_auth_request_form.html.erb
 </p>
-<p class="mt-1">    
+<p class="mt-1">
   <%= link_to("email auth path", rodauth.email_auth_path, class: "underline text-blue-600 hover:text-blue-800 visited:text-purple-600") %>
   app/views/rodauth/email_auth.html.erb
 </p>
-<p class="mt-1">    
+<p class="mt-1">
   rodauth.email_auth_request_path
   <%= link_to("email_auth-request", rodauth.email_auth_request_path, class: "underline text-blue-600 hover:text-blue-800 visited:text-purple-600") %>
-</p>  
-    
+</p>
