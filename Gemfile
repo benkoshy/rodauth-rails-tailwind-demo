@@ -52,7 +52,7 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 # gem "rodauth-rails" #, github: "benkoshy/rodauth-rails", branch: "add-tailwind-css-forms"
-gem "rodauth-rails", github: "janko/rodauth-rails", branch: "master"
+gem "rodauth-rails"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
