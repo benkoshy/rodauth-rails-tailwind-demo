@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_24_092157) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_07_215905) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "citext"
   enable_extension "plpgsql"
@@ -21,10 +21,20 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_24_092157) do
     t.datetime "email_last_sent", default: -> { "CURRENT_TIMESTAMP" }, null: false
   end
 
+  create_table "account_lockouts", force: :cascade do |t|
+    t.string "key", null: false
+    t.datetime "deadline", null: false
+    t.datetime "email_last_sent"
+  end
+
   create_table "account_login_change_keys", force: :cascade do |t|
     t.string "key", null: false
     t.string "login", null: false
     t.datetime "deadline", null: false
+  end
+
+  create_table "account_login_failures", force: :cascade do |t|
+    t.integer "number", default: 1, null: false
   end
 
   create_table "account_otp_keys", force: :cascade do |t|
@@ -70,7 +80,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_24_092157) do
   end
 
   add_foreign_key "account_email_auth_keys", "accounts", column: "id"
+  add_foreign_key "account_lockouts", "accounts", column: "id"
   add_foreign_key "account_login_change_keys", "accounts", column: "id"
+  add_foreign_key "account_login_failures", "accounts", column: "id"
   add_foreign_key "account_otp_keys", "accounts", column: "id"
   add_foreign_key "account_password_reset_keys", "accounts", column: "id"
   add_foreign_key "account_recovery_codes", "accounts", column: "id"
