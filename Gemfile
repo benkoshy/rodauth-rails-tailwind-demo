@@ -76,3 +76,6 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "rotp", "~> 6.2"
+gem "rqrcode", "~> 2.1"

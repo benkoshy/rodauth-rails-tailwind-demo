@@ -5,7 +5,7 @@ class RodauthMain < Rodauth::Rails::Auth
       :login, :logout, :remember,
       :reset_password, :change_password, :change_password_notify,
       :change_login, :verify_login_change, :close_account,  :recovery_codes,
-      :email_auth, :lockout, :confirm_password
+      :email_auth, :lockout, :confirm_password, :otp
 
     # See the Rodauth documentation for the list of available config options:
     # http://rodauth.jeremyevans.net/documentation.html
