@@ -16,12 +16,16 @@
   <p>    
     <%= button_to "Email Auth Request (Requires Login)", rodauth.email_auth_request_path, method: :post, class: "underline text-blue-600 hover:text-blue-800 visited:text-purple-600", params: {login: "freddie@queen.com"}  %>
   </p>
+  <p>
+    <%= link_to("Confirm Password", rodauth.confirm_password_path, class: "underline text-blue-600 hover:text-blue-800 visited:text-purple-600") %> (Requires Login)
+  </p>
+  <p><%= link_to("Recovery_codes" ,rodauth.recovery_codes_path, class: "underline text-blue-600 hover:text-blue-800 visited:text-purple-600") %> (Requires Login)</p>  
 </div>
 <div class="mt-5">
-  <h1 class="font-bold text-4xl"> To Be Done: </h1>
-  <p><%= link_to("Confirm Password", rodauth.confirm_password_path) %> (Requires Login)</p>
-  <p><%= link_to("Recovery_codes" ,rodauth.recovery_codes_path, class: "underline text-blue-600 hover:text-blue-800 visited:text-purple-600") %> (Requires Login)</p>  
-  <p> add_recovery_codes.html.erb - This view holds no bootstrap &#47; tailwind specific classes. </p>
+  <h1 class="font-bold text-4xl"> To Be Done: </h1>    
+  <p>    
+    add_recovery_codes.html.erb - This view holds no bootstrap &#47; tailwind specific classes. 
+  </p>
   <p>
   	<%= link_to("OTP" ,rodauth.otp_auth_path, class: "underline text-blue-600 hover:text-blue-800 visited:text-purple-600") %> </p>
   	app/views/rodauth/otp_auth.html.erb
