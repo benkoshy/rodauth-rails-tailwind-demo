@@ -10,6 +10,10 @@ class RodauthApp < Rodauth::Rails::App
 
     r.rodauth # route rodauth requests
 
+    if rodauth.uses_two_factor_authentication?
+      rodauth.require_two_factor_authenticated
+    end
+
     # ==> Authenticating requests
     # Call `rodauth.require_authentication` for requests that you want to
     # require authentication for. For example:

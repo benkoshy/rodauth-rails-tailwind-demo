@@ -32,6 +32,11 @@ class RodauthMain < Rodauth::Rails::Auth
     # login_return_to_requested_location? true
     # two_factor_auth_return_to_requested_location? true # if using MFA
 
+    # don't show error message when redirected after login
+    two_factor_need_authentication_error_flash { flash[:notice] == login_notice_flash ? nil : super() }
+    # show generic authentication message
+    two_factor_auth_notice_flash { login_notice_flash }
+
     # Autologin the user after they have reset their password.
     # reset_password_autologin? true
 
