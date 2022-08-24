@@ -6,17 +6,20 @@
 <div class="flex items-center min-h-screen dark:bg-gray-900 bg-gray-50 bg-white rounded-lg shadow-xl">
 	<div class="flex-1 h-full max-w-4xl mx-auto">
 		<div class="flex flex-col md:flex-row">
-			<div class="h-32 md:h-auto md:w-1/2">
+			<div class="flex md:hidden">
+				<%== RQRCode::QRCode.new(rodauth.otp_provisioning_uri).as_svg(:module_size=>8, :viewbox=>true, :use_path=>true, color: "ffffff", fill: "#000000") %>
+			</div>
+
+			<div class="h-32 md:h-auto md:w-1/2 hidden md:flex">
 				<div class="object-cover w-full h-full">
 					<%#== rodauth.otp_qr_code %>
 					<%== RQRCode::QRCode.new(rodauth.otp_provisioning_uri).as_svg(:module_size=>8, :viewbox=>true, :use_path=>true, color: "ffffff", fill: "#000000") %>
-				</div>				
+				</div>
 			</div>
+
+
 			<div class="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
-				<div class="w-full">					
-					<h1 class="mb-4 text-2xl font-bold text-center text-gray-700 dark:text-white">
-					Login to Your Account
-					</h1>
+				<div class="w-full">
 					<div>
 						<label class="block text-sm">
 							Email
@@ -49,9 +52,6 @@
 	</div>
 </div>
 <% end %>
-
-
-
 <!-- bootstrap content below: -->
 <% content_for :title, rodauth.otp_setup_page_title %>
 <%= form_with url: rodauth.otp_setup_path, method: :post, data: { turbo: false } do |form| %>
