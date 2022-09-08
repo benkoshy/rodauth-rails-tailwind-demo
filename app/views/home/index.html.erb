@@ -17,24 +17,26 @@
   </p>
   <p>
     <%= link_to("Confirm Password", rodauth.confirm_password_path, class: "underline text-blue-600 hover:text-blue-800 visited:text-purple-600") %> (Requires Login)
-  </p>  
+  </p>
   <p>
-    <%= link_to("OTP" ,rodauth.otp_auth_path, class: "underline text-blue-600 hover:text-blue-800 visited:text-purple-600") %> - app/views/rodauth/otp_auth.html.erb </p>
-</p>
+    <%= link_to("OTP" ,rodauth.otp_auth_path, class: "underline text-blue-600 hover:text-blue-800 visited:text-purple-600") %> - app/views/rodauth/otp_auth.html.erb 
+  </p>
+  <p>
+    <%= link_to("Recovery_codes" , rodauth.recovery_codes_path, class: "underline text-blue-600 hover:text-blue-800 visited:text-purple-600") %>
+  </p>
+  <p>
+    <%= link_to("OTP Setup" , rodauth.otp_setup_path, class: "underline text-blue-600 hover:text-blue-800 visited:text-purple-600") %>    
+  </p>
+  <p>
+    <%= link_to("OTP Disable" , rodauth.otp_disable_path, class: "underline text-blue-600 hover:text-blue-800 visited:text-purple-600") %>    
+  </p>
 </div>
 <div class="mt-5">
   <h1 class="font-bold text-4xl"> To Be Done: </h1>
   <p>
-    Recover Codes Path (Requires Login)
-    <%# if rodauth.logged_in? %>
-      <%= link_to("Recovery_codes" , rodauth.recovery_codes_path, class: "underline text-blue-600 hover:text-blue-800 visited:text-purple-600") %>
-    <%# end %>
-  </p>
-  <p>
-    add_recovery_codes.html.erb - This view holds no bootstrap &#47; tailwind specific classes. 
-  </p>
-  <p>app/views&#47;rodauth&#47;otp_disable.html.erb</p>
-  <p>app/views&#47;rodauth&#47;otp_setup.html.erb</p>
+    Add Recovery Codes - this view    
+  </p> 
+  
   <p>app/views&#47;rodauth&#47;recovery_auth.html.erb</p>
   <p>app/views&#47;rodauth&#47;sms_auth.html.erb</p>
   <p>app/views&#47;rodauth&#47;sms_confirm.html.erb</p>

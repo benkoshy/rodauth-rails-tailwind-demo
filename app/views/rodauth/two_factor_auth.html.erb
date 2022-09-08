@@ -1,25 +1,9 @@
 <% content_for :title, rodauth.two_factor_auth_page_title %>
+
 <ul>
   <% rodauth.two_factor_auth_links.sort.each do |_, link, text| %>
-    <li><%= link_to text, link %></li>
+    <li>
+      <%= link_to text, link, class: "text-blue-500 underline hover:text-blue-700 mt-3" %>
+    </li>
   <% end %>
 </ul>
-<% if rodauth.two_factor_auth_links.any? %>
-  <div class="w-48 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
-    <%= first_link_group = rodauth.two_factor_auth_links.sort[0] %>
-    <%= link_to(first_link_group[1], first_link_group[2], "aria-current": "true" , class: "block py-2 px-4 w-full text-white bg-blue-700 rounded-t-lg border-b border-gray-200 cursor-pointer dark:bg-gray-800 dark:border-gray-600") %>
-    <% rodauth.two_factor_auth_links.sort.drop(1).each do |_, link, text|  %>
-      <a href="<%= link  %>" class="block py-2 px-4 w-full border-b border-gray-200 cursor-pointer hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white">
-        <%= text %>
-      </a>
-    <% end %>
-  </div>
-<% else %>
-  <div class="mt-2">
-    <div class="bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4" role="alert">
-      <p class="font-bold"> Two Factor Auth Not Set Up </p>
-      <p> There aren't any two factor auth links here - <%= link_to("please set them up!", "https://janko.io/adding-multifactor-authentication-in-rails-with-rodauth", class: "text-lg text-blue-500  hover:underline hover:text-red-500 active:text-yellow-500") %>
-      </p>
-    </div>
-  </div>
-<% end %>
