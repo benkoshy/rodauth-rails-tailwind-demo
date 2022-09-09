@@ -5,7 +5,8 @@ class RodauthMain < Rodauth::Rails::Auth
       :login, :logout, :remember,
       :reset_password, :change_password, :change_password_notify,
       :change_login, :verify_login_change, :close_account,  
-      :email_auth, :lockout, :confirm_password, :otp, :recovery_codes
+      :email_auth, :lockout, :confirm_password, :otp, :recovery_codes,
+      :sms_codes
 
     # See the Rodauth documentation for the list of available config options:
     # http://rodauth.jeremyevans.net/documentation.html
@@ -137,5 +138,11 @@ class RodauthMain < Rodauth::Rails::Auth
     # reset_password_deadline_interval Hash[hours: 6]
     # verify_login_change_deadline_interval Hash[days: 2]
     # remember_deadline_interval Hash[days: 30]
+
+
+    sms_send do |phone, message|
+      # security breach - don't do this on production apps
+      puts "\n phone: #{phone} and message: #{message}" * 20
+    end
   end
 end

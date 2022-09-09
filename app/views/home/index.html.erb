@@ -11,7 +11,8 @@
   <p><%= link_to("reset-password-request" ,rodauth.reset_password_request_path, class: "underline text-blue-600 hover:text-blue-800 visited:text-purple-600") %></p>
   <p><%= link_to("reset-password (This will only work via token)" ,rodauth.reset_password_path, class: "underline text-blue-600 hover:text-blue-800 visited:text-purple-600") %></p>
   <p><%= link_to("verify-login-change (This will only work via token)" ,rodauth.verify_login_change_path, class: "underline text-blue-600 hover:text-blue-800 visited:text-purple-600") %></p>
-  <p><%= link_to("close-account" ,rodauth.close_account_path, class: "underline text-blue-600 hover:text-blue-800 visited:text-purple-600") %></p>
+  <p><%= link_to("close-account" ,rodauth.close_account_path, class: "underline text-blue-600 hover:text-blue-800 visited:text-purple-600") %>
+  </p>
   <p>
     <%= button_to "Email Auth Request (Requires Login)", rodauth.email_auth_request_path, method: :post, class: "underline text-blue-600 hover:text-blue-800 visited:text-purple-600", params: {login: "freddie@queen.com"}  %>
   </p>
@@ -19,7 +20,7 @@
     <%= link_to("Confirm Password", rodauth.confirm_password_path, class: "underline text-blue-600 hover:text-blue-800 visited:text-purple-600") %> (Requires Login)
   </p>
   <p>
-    <%= link_to("OTP" ,rodauth.otp_auth_path, class: "underline text-blue-600 hover:text-blue-800 visited:text-purple-600") %> - app/views/rodauth/otp_auth.html.erb 
+    <%= link_to("OTP" ,rodauth.otp_auth_path, class: "underline text-blue-600 hover:text-blue-800 visited:text-purple-600") %> 
   </p>
   <p>
     <%= link_to("Recovery_codes" , rodauth.recovery_codes_path, class: "underline text-blue-600 hover:text-blue-800 visited:text-purple-600") %>
@@ -30,24 +31,31 @@
   <p>
     <%= link_to("OTP Disable" , rodauth.otp_disable_path, class: "underline text-blue-600 hover:text-blue-800 visited:text-purple-600") %>    
   </p>
+  <p>
+    <%= link_to "Manage MFA (two_factor_manage)", rodauth.two_factor_manage_path, class: "underline text-blue-600 hover:text-blue-800 visited:text-purple-600" %>
+  </p>
+  <p>
+    <%= link_to("SMS Setup" , rodauth.sms_setup_path, class: "underline text-blue-600 hover:text-blue-800 visited:text-purple-600") %>    
+  </p>
+    <p>
+    <%= link_to("SMS Confirm" , rodauth.sms_confirm_path, class: "underline text-blue-600 hover:text-blue-800 visited:text-purple-600") %>    
+  </p>
+  <p>
+    <%= link_to("SMS Disable" , rodauth.sms_disable_path, class: "underline text-blue-600 hover:text-blue-800 visited:text-purple-600") %>    
+  </p>  
 </div>
 <div class="mt-5">
   <h1 class="font-bold text-4xl"> To Be Done: </h1>
   <p>
     Add Recovery Codes - this view    
   </p> 
-  
-  <p>app/views&#47;rodauth&#47;recovery_auth.html.erb</p>
-  <p>app/views&#47;rodauth&#47;sms_auth.html.erb</p>
-  <p>app/views&#47;rodauth&#47;sms_confirm.html.erb</p>
-  <p>app/views&#47;rodauth&#47;sms_disable.html.erb</p>
-  <p>app/views&#47;rodauth&#47;sms_request.html.erb</p>
-  <p>app/views&#47;rodauth&#47;sms_setup.html.eWTTTrb</p>
-  <p>app/views&#47;rodauth&#47;two_factor_auth.html.erb</p>
-  <p>app/views&#47;rodauth&#47;two_factor_disable.html.erb</p>
   <p>
-    <%= link_to "Manage MFA (two_factor_manage)", rodauth.two_factor_manage_path, class: "underline text-blue-600 hover:text-blue-800 visited:text-purple-600" %>
+    <%= link_to("SMS Auth" , rodauth.sms_auth_path, class: "underline text-blue-600 hover:text-blue-800 visited:text-purple-600") %>    
   </p>
+  <p>app/views&#47;rodauth&#47;recovery_auth.html.erb</p>  
+  <p>app/views&#47;rodauth&#47;sms_request.html.erb</p>  
+  <p>app/views&#47;rodauth&#47;two_factor_auth.html.erb</p>
+  <p>app/views&#47;rodauth&#47;two_factor_disable.html.erb</p>  
   <p>app/views/rodauth/unlock_account.html.erb
     <%= link_to("unlock_account - not working for some reason", rodauth.unlock_account_path , class: "underline text-blue-600 hover:text-blue-800 visited:text-purple-600") %>
   </p>
