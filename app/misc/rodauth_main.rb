@@ -144,5 +144,8 @@ class RodauthMain < Rodauth::Rails::Auth
       # security breach - don't do this on production apps
       puts "\n phone: #{phone} and message: #{message}" * 20
     end
+
+    # let's test out the lockout feature:
+    max_invalid_logins 2
   end
 end
