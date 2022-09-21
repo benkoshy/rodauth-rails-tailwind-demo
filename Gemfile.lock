@@ -1,3 +1,17 @@
+GIT
+  remote: https://github.com/benkoshy/rodauth-rails.git
+  revision: 3b64fa713ceb6f38ec752e8ad8298591721df386
+  branch: add-tailwind-css-forms
+  specs:
+    rodauth-rails (1.4.2)
+      bcrypt
+      railties (>= 4.2, < 8)
+      roda (~> 3.55)
+      rodauth (~> 2.23)
+      rodauth-model (~> 0.2)
+      sequel-activerecord_connection (~> 1.1)
+      tilt
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -175,21 +189,13 @@ GEM
     reline (0.3.1)
       io-console (~> 0.5)
     rexml (3.2.5)
-    roda (3.58.0)
+    roda (3.60.0)
       rack
     rodauth (2.25.0)
       roda (>= 2.6.0)
       sequel (>= 4)
     rodauth-model (0.2.0)
       rodauth (~> 2.0)
-    rodauth-rails (1.5.5)
-      bcrypt
-      railties (>= 4.2, < 8)
-      roda (~> 3.55)
-      rodauth (~> 2.25)
-      rodauth-model (~> 0.2)
-      sequel-activerecord_connection (~> 1.1)
-      tilt
     rotp (6.2.0)
     rqrcode (2.1.2)
       chunky_png (~> 1.0)
@@ -201,7 +207,7 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
-    sequel (5.59.0)
+    sequel (5.60.1)
     sequel-activerecord_connection (1.2.9)
       activerecord (>= 4.2, < 8)
       after_commit_everywhere (~> 1.1)
@@ -257,7 +263,7 @@ DEPENDENCIES
   puma (~> 5.0)
   rails (~> 7.0.3)
   redis (~> 4.0)
-  rodauth-rails
+  rodauth-rails!
   rotp (~> 6.2)
   rqrcode (~> 2.1)
   selenium-webdriver
