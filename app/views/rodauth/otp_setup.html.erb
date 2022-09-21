@@ -1,4 +1,3 @@
-<!-- This template has been shamelessly modified from that of LaraInfo's. Here is the link: https://larainfo.com/blogs/tailwind-css-create-login-form-with-image-on-left-side-example -->
 <% content_for :title, rodauth.otp_setup_page_title %>
 <%= form_with url: rodauth.otp_setup_path, method: :post, data: { turbo: false } do |form| %>
 <%= form.hidden_field rodauth.otp_setup_param, value: rodauth.otp_user_key, id: "otp-key" %>
@@ -50,3 +49,4 @@
 	</div>
 </div>
 <% end %>
+
