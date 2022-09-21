@@ -63,7 +63,9 @@
     Add Recovery Codes - this view    
   </p>   
   <p></p>
-  <p>app/views&#47;rodauth&#47;two_factor_disable.html.erb</p>    
+  <p>
+    <%= link_to("Two Factor Disable", rodauth.two_factor_disable_path, class: "underline text-blue-600 hover:text-blue-800 visited:text-purple-600") %>    
+  </p>    
   <p>app/views/rodauth/webauthn_auth.html.erb</p>
   <p>app/views/rodauth/webauthn_remove.html.erb</p>
   <p>app/views/rodauth/webauthn_setup.html.erb</p>
