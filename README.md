@@ -14,6 +14,21 @@ This is a demo rails app to test rodauth-rails tailwind integration.
 
 Now you can test it out.
 
+### Testing with `tailwindcss-rails`
+
+1. Add tailwindcss-rails to gemfile:
+
+```rb
+# Gemfile
+gem "tailwindcss-rails"
+
+# or
+bundle add "tailwindcss-rails"
+```
+
+2. `bundle install`
+3. `rails g rodauth:views` and overwrite all files using the `a` option - note that we have not specified the `--css=tailwind` flag, but the default views should still come out as *tailwind* views, rather than bootstrap. 
+
 **Notes:** 
 
 * When using QR Codes, we are relying on the [latest version of rodauth - cutting edge](https://github.com/jeremyevans/rodauth/commit/90ad8052661c55f8cc394bb36b38b48ddf65899f) - which ensures the QR code will always have a white background.
