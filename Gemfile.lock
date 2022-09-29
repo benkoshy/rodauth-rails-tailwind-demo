@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/benkoshy/rodauth-rails.git
-  revision: 3b64fa713ceb6f38ec752e8ad8298591721df386
+  revision: d6b082fb2e17cbcd36a799127866ec4475443632
   branch: add-tailwind-css-forms
   specs:
     rodauth-rails (1.4.2)
@@ -121,7 +121,7 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
-    loofah (2.18.0)
+    loofah (2.19.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
@@ -130,7 +130,7 @@ GEM
     matrix (0.4.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
-    minitest (5.16.2)
+    minitest (5.16.3)
     msgpack (1.5.2)
     net-imap (0.2.3)
       digest
