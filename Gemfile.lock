@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/benkoshy/rodauth-rails.git
-  revision: d6b082fb2e17cbcd36a799127866ec4475443632
+  revision: c9b58853f3708eaa75e7787fb522b6cb5a3ab3f2
   branch: add-tailwind-css-forms
   specs:
     rodauth-rails (1.4.2)
@@ -207,7 +207,7 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
-    sequel (5.60.1)
+    sequel (5.61.0)
     sequel-activerecord_connection (1.2.9)
       activerecord (>= 4.2, < 8)
       after_commit_everywhere (~> 1.1)
@@ -248,7 +248,7 @@ GEM
     websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.6.0)
+    zeitwerk (2.6.1)
 
 PLATFORMS
   x86_64-linux
