@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/benkoshy/rodauth-rails.git
-  revision: cb057766f1d743bcfe3cb1312c2bbbc06b8e2d40
+  revision: 2d1ef49e6d7b81ce1a6f8a87362b8c955552fc3b
   branch: add-tailwind-css-forms
   specs:
     rodauth-rails (1.4.2)
