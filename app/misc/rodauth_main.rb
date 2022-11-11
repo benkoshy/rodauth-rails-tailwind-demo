@@ -146,6 +146,6 @@ class RodauthMain < Rodauth::Rails::Auth
     end
 
     # let's test out the lockout feature:
-    max_invalid_logins 2
+    max_invalid_logins 20
   end
 end
